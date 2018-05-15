@@ -1,0 +1,7 @@
+.header{text-align: center; }
+.name{font-size: 40px; }
+.section{margin:10px; padding:10px; border-bottom-style: solid; }
+.subsection{ margin-bottom: 10px; }
+.section-heading{font-size:25px; text-decoration: underline; margin-bottom: 5px; }
+.subsection-heading{font-weight: bold; }
+.footer{ text-align: center; }

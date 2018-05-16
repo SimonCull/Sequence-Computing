@@ -1,3 +1,4 @@
+body{ margin-left: 50px; margin-right: 50px; }
 .header{text-align: center; }
 .name{font-size: 40px; }
 .section{margin:10px; padding:10px; border-bottom-style: solid; }
@@ -5,3 +6,7 @@
 .section-heading{font-size:25px; text-decoration: underline; margin-bottom: 5px; }
 .subsection-heading{font-weight: bold; }
 .footer{ text-align: center; }
+
+#cssSelectText{font-size: 15px; }
+#cssSelect{ z-index: 2; position:fixed; top:0; right: 100px; padding: 10px; border-style: solid; border-top-style: hidden;  border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; background-color: aliceblue; }
+

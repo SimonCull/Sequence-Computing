@@ -5,10 +5,12 @@
 </head>
 <body>
     <div id="cssSelect">
-        <span id="cssSelectText">Don't like my style? </span><select id="cssSelecter" ></select>
+        <p class="small-text hidden">x</p>
+        <span id="cssSelectText" class="medium-text hidden">Don't like my style? </span><select id="cssSelecter" class="hidden"></select>
+        <span id="cssSelectQuestionMark" class="small-text button-pointer"  onclick="toggleCssOverlay();">?</span>
     </div>
     <div class="header">
-        this is the header
+        
     </div>
     <div class="body">
         <div class="name section">
@@ -39,6 +41,32 @@
                     <li>A-Levels: Mathematics, Photography, Psychology</li>
                     <li>GCSEs: Lots</li>
                 </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-heading">
+            Employers
+            </div>
+            <div class="subsection">
+                <div class="subsection-heading">
+                    Current:
+                </div>
+                <div class="subsection-body">
+                    <a href="https://www.schemeserve.com/">SchemeServe</a>
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="subsection-heading">
+                    Past:
+                </div>
+                <div class="subsection-body">
+                    <a href="https://www.arcusglobal.com/">Arcus Global</a>
+                    <br>
+                    <a href="#">Sequence Computing</a>
+                    <br>
+                    <a href="#">A N Other</a>
+                </div>
             </div>
         </div>
 
@@ -84,6 +112,6 @@
     </div>
 
     <div class="footer">
-        <span>this is the footer</span>
+        
     </div>
 </body>

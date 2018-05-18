@@ -1,5 +1,4 @@
 function populateCssSelect() {
-    debugger;
     var styles = ['Basic'];
     var opt;
     var cssSelect = document.getElementById("cssSelecter");
@@ -11,4 +10,20 @@ function populateCssSelect() {
     }
 }
 
+function toggleCssOverlay() {
+    var cssSelecter = document.getElementById("cssSelecter");
+    var cssSelectText = document.getElementById("cssSelectText");
+    var cssSelectQuestionMark = document.getElementById("cssSelectQuestionMark");
+    toggleHidden(cssSelecter);
+    toggleHidden(cssSelectText);
+    toggleHidden(cssSelectQuestionMark);
+}
+
+function toggleHidden(element){
+    if(element.classList.contains("hidden")){
+        element.classList.remove("hidden");
+    }else{
+        element.classList.add("hidden");""
+    }
+}
 window.addEventListener("DOMContentLoaded", populateCssSelect());

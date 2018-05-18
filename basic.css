@@ -7,6 +7,10 @@ body{ margin-left: 50px; margin-right: 50px; }
 .subsection-heading{font-weight: bold; }
 .footer{ text-align: center; }
 
-#cssSelectText{font-size: 15px; }
-#cssSelect{ z-index: 2; position:fixed; top:0; right: 100px; padding: 10px; border-style: solid; border-top-style: hidden;  border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; background-color: aliceblue; }
+.hidden {display: none;}
+.small-text{ font-size: 12px; }
+.medium-text { font-size: 15px; }
+.button-pointer { cursor: pointer;}
 
+
+#cssSelect{ z-index: 2; position:fixed; top:0; right: 50px; border-style: solid; border-top-style: hidden;  border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; background-color: white; }

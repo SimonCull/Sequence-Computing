@@ -5,9 +5,14 @@
 </head>
 <body>
     <div id="cssSelect">
-        <p class="small-text hidden">x</p>
-        <span id="cssSelectText" class="medium-text hidden">Don't like my style? </span><select id="cssSelecter" class="hidden"></select>
-        <span id="cssSelectQuestionMark" class="small-text button-pointer"  onclick="toggleCssOverlay();">?</span>
+        
+        <div id="cssSelectBody" class="hidden">
+            <span id="cssSelectText" class="medium-text">Don't like my style? </span>
+            <span id="cssSelectClose" class="button-pointer" title="Close" onclick="toggleCssOverlay();">&#x2716;</span>
+            <br>
+            <select id="cssSelecter"></select>
+        </div>
+        <span id="cssSelectButton" class="small-text button-pointer" title="Change CSS" onclick="toggleCssOverlay();">?</span>
     </div>
     <div class="header">
         
@@ -39,7 +44,7 @@
                 <ul>
                     <li>BA(Hons.) Business Management</li>
                     <li>A-Levels: Mathematics, Photography, Psychology</li>
-                    <li>GCSEs: Lots</li>
+                    <li>GCSEs: Some</li>
                 </ul>
             </div>
         </div>
@@ -63,7 +68,7 @@
                 <div class="subsection-body">
                     <a href="https://www.arcusglobal.com/">Arcus Global</a>
                     <br>
-                    <a href="#">Sequence Computing</a>
+                    <a href="?self=true">Sequence Computing</a>
                     <br>
                     <a href="#">A N Other</a>
                 </div>

@@ -11,12 +11,10 @@ function populateCssSelect() {
 }
 
 function toggleCssOverlay() {
-    var cssSelecter = document.getElementById("cssSelecter");
-    var cssSelectText = document.getElementById("cssSelectText");
-    var cssSelectQuestionMark = document.getElementById("cssSelectQuestionMark");
-    toggleHidden(cssSelecter);
-    toggleHidden(cssSelectText);
-    toggleHidden(cssSelectQuestionMark);
+    var cssSelectBody = document.getElementById("cssSelectBody");
+    var cssSelectButton = document.getElementById("cssSelectButton");
+    toggleHidden(cssSelectBody);
+    toggleHidden(cssSelectButton);
 }
 
 function toggleHidden(element){

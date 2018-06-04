@@ -12,5 +12,8 @@ body{ margin-left: 50px; margin-right: 50px; }
 .medium-text { font-size: 15px; }
 .button-pointer { cursor: pointer;}
 
-
+#cssSelectBody { padding-left: 10px; padding-right: 10px; padding-bottom: 5px; padding-top: 3px; }
+#cssSelectButton { padding:10px; }
+#cssSelecter{ width:100%; padding-top: 2px; }
+#cssSelectClose { vertical-align: text-top; text-align: right; border-style: none; border-width: 1px; width: 10px; height: 8px; font-size: 10px; padding:1px; color: red; border-color: black; }
 #cssSelect{ z-index: 2; position:fixed; top:0; right: 50px; border-style: solid; border-top-style: hidden;  border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; background-color: white; }

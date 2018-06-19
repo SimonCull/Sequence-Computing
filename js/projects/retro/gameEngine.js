@@ -81,11 +81,11 @@ class GameEngine{
           break;
         case this.gameStates.RUNNING:
           if(!this.game.run()){
+            console.log("Game Over.")
             this.gameState=this.gameStates.END;
           }
           break;
         case this.gameStates.END: 
-          console.log("Game Over.")
           text("Game Over.", width*0.5, height *0.5);
           setTimeout(()=>this.gameState=this.gameStates.WAITING, 3000);
           break;

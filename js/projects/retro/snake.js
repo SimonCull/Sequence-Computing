@@ -7,20 +7,20 @@ const directions ={
     
 class Food{
   constructor(){
-    this.x = 5+floor(random(1, width/10))*10;
-    this.y = 5+floor(random(1, height/10))*10;
+    this.x = 10+floor(random(1, width/20))*20;
+    this.y = 10+floor(random(1, height/20))*20;
   }
   
   run(){
     ellipseMode(CENTER);
-    ellipse(this.x,this.y, 8, 8); 
+    ellipse(this.x,this.y, 18, 18); 
   }
 }
 
 class SnakeGame{
   constructor(){
     this.title = "Snake";
-    this.size = createVector(200,300);
+    this.size = createVector(400,400);
   }
   
   load(){
@@ -53,7 +53,7 @@ class SnakeGame{
 class Snake{
   constructor(x, y){
     this.body = [];
-    this.size = 10;
+    this.size = 20;
     this.direction = directions.UP;
     this.addSegment(x, y);
   }

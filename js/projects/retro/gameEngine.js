@@ -38,7 +38,8 @@ class GameEngine{
     };
     this.gameState = this.gameStates.WAITING;
     this.loaders = [];
-    createCanvas(game.size.x,game.size.y);
+    let c = createCanvas(game.size.x,game.size.y);
+    c.parent(game.title.toLowerCase()+'-parent');
   }
   
   load(){

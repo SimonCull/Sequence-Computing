@@ -14,4 +14,3 @@ function keyPressed(){
 function mouseClicked(){
   gameEngine.mouseClicked();
 }
-}

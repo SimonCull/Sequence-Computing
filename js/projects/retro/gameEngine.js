@@ -60,7 +60,7 @@ class GameEngine{
     this.loaded = false;
     this.loaders = [this.game];
     this.canvas = createCanvas(game.size.x,game.size.y);
-    //this.canvas.parent(game.title.toLowerCase()+'-parent');
+    this.canvas.parent(game.title.toLowerCase()+'-parent');
   }
   
   load(){

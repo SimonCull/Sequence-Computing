@@ -1,8 +1,11 @@
+/*jslint
+    es6
+*/
 function populateCssSelect() {
-    var styles = ['Basic'];
-    var opt;
-    var cssSelect = document.getElementById("cssSelecter");
-    for (var i = 0; i< styles.length; i++){
+    const styles = ['Basic'];
+    let opt;
+    const cssSelect = document.getElementById("cssSelecter");
+    for (let i = 0; i< styles.length; i++){
         opt = document.createElement('option');
         opt.innerHTML = styles[i];
         opt.value = styles[i]+'.css';
@@ -11,8 +14,8 @@ function populateCssSelect() {
 }
 
 function toggleCssOverlay() {
-    var cssSelectBody = document.getElementById("cssSelectBody");
-    var cssSelectButton = document.getElementById("cssSelectButton");
+    const cssSelectBody = document.getElementById("cssSelectBody");
+    const cssSelectButton = document.getElementById("cssSelectButton");
     toggleHidden(cssSelectBody);
     toggleHidden(cssSelectButton);
 }

@@ -21,16 +21,24 @@ class SnakeGame{
   constructor(){
     this.title = "Snake";
     this.size = createVector(400,400);
+    this.loaded = false;
   }
-  
+
   load(){
-    return new Promise((complete,error)=>{
-      console.log("LOADING GAME: "+this.title);
+    if(this.loaded){
+      return true;
+    }
+    if(!this.loading){
+      this.loading = true;
+      console.log('LOADING GAME: '+this.title);
       this.snake = new Snake(this.size.x/2,this.size.y/2);
       this.food = new Food();
       frameRate(5);
-      complete(true);
-    });
+    }else{
+      //trigger iterative processes
+      
+      this.loaded=true;
+    }
   }
 
   run(){
@@ -47,6 +55,11 @@ class SnakeGame{
   keyPressed(keyCode){
     if(this.snake)
       this.snake.setDirection(keyCode);
+  }
+  
+   reset(){
+    this.loading = false;
+    this.loaded = false;
   }
 }
 
@@ -93,26 +106,27 @@ class Snake{
   }
   
   draw(){
-    for(let segment of this.body){
-      rect(segment.x, segment.y, this.size, this.size);
-    }
+    this.body.every(segment => rect(segment.x,segment.y, this.size, this.size));
   }
   
   checkCollisions(target){
-    let current = this.body[this.body.length-1];
-    return (target.x >= current.x &&
-            target.x < current.x+ this.size &&
-            target.y >= current.y &&
-            target.y < current.y+ this.size);
+    return this.body.some(
+      segment =>{
+        return (target   != segment              &&
+                target.x >= segment.x            &&
+                target.x <  segment.x+ this.size &&
+                target.y >= segment.y            &&
+                target.y <  segment.y+ this.size);
+        }
+      );
   }
   
   hitSelf(){
-    for(let i = 0; i < this.body.length-2; i++){
-      if(this.checkCollisions(this.body[i])){
-        return true;
-      }
-    }
-    return false;
+    return this.body.some(
+      segment=> {
+          return this.checkCollisions(segment);
+        }
+      );
   }
   
   addSegment(x,y){

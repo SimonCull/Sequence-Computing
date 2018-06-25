@@ -10,3 +10,8 @@ function draw(){
 function keyPressed(){
   gameEngine.keyPressed(keyCode);
 }
+
+function mouseClicked(){
+  gameEngine.mouseClicked();
+}
+}
